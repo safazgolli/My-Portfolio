@@ -1,0 +1,78 @@
+main {
+    /* Turns this element into a flexbox */
+    display: flex;
+    /* Forces elements to the next line if they don't fit */
+    flex-wrap: wrap;
+  
+  }
+  div{
+    display: inline-block;
+  
+  }
+  .section1{
+    width: 100%;
+    height: 300px;
+    /* Sets top and bottom margin to 8px. Auto will center element */
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+    margin-right: 8px;
+    border: 3px solid azure;
+    background-image: url("../images/binary-code-background-panoramic-blue-digital-glowing-neon-style-data-banner-out-focus-color-169892269.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .main-header {
+    display: flex;
+    /* Defines how to distribute the empty space between child elements */
+    justify-content: space-between;
+    padding: 10px;
+    background: #8dafd1;
+    color: #fff;
+  }
+  .name{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 48px;
+  }
+  
+  li{
+    /* Sets display to inline */
+    display: inline;
+    list-style-type: none;
+    font-size: 18px;
+    flex: 1 0 200px;
+    padding: 10px;
+    text-align: left;
+    border-style: solid;
+    border-width: 1px;
+    border-color:  #8dafd1 ;
+
+  }
+  .box1{
+    padding: 20px 40px;
+  }
+  .box {
+    position:relative;
+  }
+.bet_time {
+    position:absolute;
+    bottom:-280px;
+    right:10px;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: azure;
+}
+/*split the screen*/
+.splitscreen {
+  display: flex;
+}
+
+.splitscreen .left,
+.splitscreen .right {
+  flex: 1;
+}
+img{
+  float:right;
+  width:42px;
+  height:42px;
+}
