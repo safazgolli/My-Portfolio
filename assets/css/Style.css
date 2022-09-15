@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 main {
     /* Turns this element into a flexbox */
     display: flex;
@@ -5,11 +9,11 @@ main {
     flex-wrap: wrap;
   
   }
-  div{
-    display: inline-block;
-  
-  }
-  .section1{
+  .background-section{
+    display: flex;
+    background-image: url("../images/binary-code-background-panoramic-blue-digital-glowing-neon-style-data-banner-out-focus-color-169892269.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%; 
     width: 100%;
     height: 300px;
     /* Sets top and bottom margin to 8px. Auto will center element */
@@ -17,11 +21,30 @@ main {
     margin-bottom: 8px;
     margin-left: 8px;
     margin-right: 8px;
-    border: 3px solid azure;
-    background-image: url("../images/binary-code-background-panoramic-blue-digital-glowing-neon-style-data-banner-out-focus-color-169892269.jpeg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+
   }
+  div{
+    display: flex;
+     justify-content: center;
+     align-items: center;
+    /* margin: 4px 4px 4px 4px;
+    padding: 4px 4px 4px 4px; */
+    /* background-color: rgb(0, 183, 255); */
+    display: inline-block;
+
+  }
+  section{
+    width: 70%;
+    margin: 20px auto;
+
+    /* Sets top and bottom margin to 20px. Auto will center element */
+    border: 5px solid darkblue;
+    background-color: #66aede;
+    
+  }
+  
+  
+ 
   .main-header {
     display: flex;
     /* Defines how to distribute the empty space between child elements */
@@ -34,45 +57,131 @@ main {
     font-family: 'Courier New', Courier, monospace;
     font-size: 48px;
   }
+
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #8dafd1;
+  }
+  
+   li {
+    float: right;
+  }
   
   li{
-    /* Sets display to inline */
-    display: inline;
-    list-style-type: none;
-    font-size: 18px;
-    flex: 1 0 200px;
-    padding: 10px;
+    
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  } 
+  nav {
+    display: flex;
+    background-color:  #8dafd1;
+  }
+  
+  nav a {
+    color: #13293d;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+  }
+  nav a:hover {
+    background-color: rgb(103, 76, 208);
+  }
+  .p1{
+    text-indent: 20px;
     text-align: left;
-    border-style: solid;
-    border-width: 1px;
-    border-color:  #8dafd1 ;
+    font-size: 18px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+  }
+  .prag{
+    margin: 20px auto;
+  margin-left: 10px ;
+  padding: 10px auto;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    font-size: 24px;
+    color: #fff;
+    
+  }
+  
 
-  }
-  .box1{
-    padding: 20px 40px;
-  }
-  .box {
-    position:relative;
-  }
-.bet_time {
-    position:absolute;
-    bottom:-280px;
-    right:10px;
-    font-size: 30px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: azure;
-}
-/*split the screen*/
-.splitscreen {
-  display: flex;
+h2{
+  margin: 20px auto;
+  margin-left: 10px ;
+  padding: 10px auto;
+  display: block;
+  font-weight: bold;
+  text-align: left;
+  font-size: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
 
-.splitscreen .left,
+
+
+
+.img1{
+   width: 600px;
+  margin: 20px auto;
+  margin-left: 300px ;
+  border-radius: 6%;
+  flex: 1 1 600px;
+}
+
+
+.img1:hover{
+  color: #111; 
+  background: rgb(175, 47, 255); 
+  box-shadow: 0 0 100px rgb(123, 47, 255); 
+  transform: scale(1.5); 
+}
+.img2{
+  margin: 20px auto;
+  margin-left: 200px;
+  width: 300px;
+  height: 150px;
+  border-radius: 6%;
+  flex: 1 1 300px;
+}
+.img2:hover{
+  color: #111; 
+  background: rgb(175, 47, 255); 
+  box-shadow: 0 0 100px rgb(123, 47, 255);
+} 
+
+
+@media screen and (max-width: 412px) {
+  .splitscreen .left,
 .splitscreen .right {
-  flex: 1;
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
 }
-img{
-  float:right;
-  width:42px;
-  height:42px;
+  @media screen and (max-width: 768px) {
+    /* Use flex-direction */
+    main,
+   nav, a {
+      flex-direction: column;
+    }
+  
 }
+@media screen and (max-width: 768px) {
+  .main-header {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  }
+  @media screen and (max-width: 768px) {
+    .img1 {
+      flex-direction: column;
+      background-color: #8ac4ff;
+    }
+  }
+
+

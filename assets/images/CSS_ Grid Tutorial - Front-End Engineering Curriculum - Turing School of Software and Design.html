@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<!-- saved from url=(0356)https://frontend.turing.edu/lessons/module-1/css-grid-tutorial.html?ads_cmpid=6451354298&ads_adid=76255849919&ads_matchtype=&ads_network=g&ads_creative=517671727591&utm_term=&ads_targetid=dsa-19959388920&utm_campaign=&utm_source=adwords&utm_medium=ppc&ttv=2&gclid=Cj0KCQjw94WZBhDtARIsAKxWG-87rK41UA1DwNS6o6VX5rqjDLsOBVquOR8hN2Y1Rx9b00FQx-jjXI8aAnCUEALw_wcB -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>CSS: Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design</title>
+
+<link rel="apple-touch-icon" sizes="57x57" href="https://frontend.turing.edu/assets/favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://frontend.turing.edu/assets/favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://frontend.turing.edu/assets/favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://frontend.turing.edu/assets/favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://frontend.turing.edu/assets/favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://frontend.turing.edu/assets/favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://frontend.turing.edu/assets/favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://frontend.turing.edu/assets/favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://frontend.turing.edu/assets/favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://frontend.turing.edu/assets/favicons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://frontend.turing.edu/assets/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://frontend.turing.edu/assets/favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://frontend.turing.edu/assets/favicons/favicon-16x16.png">
+<link rel="manifest" href="https://frontend.turing.edu/assets/favicons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<meta content="CSS: Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design" name="title">
+<meta content="CSS: Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design" name="og:title">
+
+
+  <meta content="http://frontend.turing.io/" property="og:url">
+  <meta content="Open source curriculum for the Turing School of Software and Design&#39;s front end engineering program." property="og:description">
+  <meta content="blog" property="og:type">
+
+
+
+  <meta name="keywords" content="css, layout, grid">
+
+
+<link href="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/reset.css">
+<link rel="stylesheet" type="text/css" href="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/styles.css">
+
+<script type="text/javascript" async="" src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/analytics.js"></script><script src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/jquery.min.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/js"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date());
+gtag('config', 'UA-103295514-1'); </script>
+
+  </head>
+
+  <body>
+    <nav role="navigation">
+  <ul class="nav-links">
+    <li>
+      <a href="https://frontend.turing.edu/" class="home-logo-link">
+        <img src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/TuringSchool_LogoMark_Gray.png" alt="Turing School of Software and Design logo">
+      </a>
+    </li>
+    <li class="uppercase"><a href="https://frontend.turing.edu/today">Calendar</a></li>
+    <li class="uppercase"><a href="https://frontend.turing.edu/lessons" class="active-link">Lessons</a></li>
+    <li class="uppercase"><a href="https://frontend.turing.edu/projects">Projects</a></li>
+    <li class="uppercase"><a href="https://frontend.turing.edu/documents">Documents</a></li>
+    <li class="search-bar">
+      <input aria-label="search-input" type="search" placeholder="Search lessons...">
+      <button class="clear-search hide">
+        <img src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/x-icon.svg">
+      </button>
+    </li>
+  </ul>
+</nav>
+
+    <div class="container">
+      <section class="content">
+        <article>
+          <header>
+            <h1>
+              CSS: Grid Tutorial
+            </h1>
+          </header>
+          <h2 id="overview">Overview</h2>
+
+<p>In this tutorial, we will start off by walking through the big-picture things you need to know about grid, then get into <em>some</em> ways to get more detailed in how you control your layout with it. This is meant to be an introduction that positions you to implement Grid for a simple layout. It should also equip you with some resources for exploring more on your own.</p>
+
+<p>As you read through each section and look at the associated CodePen, make sure to stop and read the CSS in each CodePen even if you aren’t given a task for it.</p>
+
+<p>As you work through this, please keep in mind that there are always <em>many</em> ways of solving a problem in programming. There may be cases where one developer solves a problem with Flexbox, another solves the same problem with Grid and another doesn’t use either. Here’s another very possible situation: both developers choose to use Grid, but implement Grid differently to achieve the same layout. There is no <strong>one</strong> or <strong>right</strong> way. That makes the learning goals of this feel a little vague; you can implement Grid without knowing much or even writing much code. It will be up to you on how deep you want to go!</p>
+
+<h2 id="can-i-even-use-grid">Can I even use Grid?</h2>
+
+<p><a href="https://caniuse.com/#feat=css-grid">Can I Use?</a> provides data on support for various features across the major browsers.&lt;/p&gt;</p>
+
+<h2 id="why-use-grid">Why use Grid?</h2>
+
+<p>CSS has always been used to layout web pages, but was never very good at it.
+Flexbox helped out, but it’s intended for simpler one-dimensional layouts, not complex two-dimensional ones
+(Flexbox and Grid actually work very well together). Can you imagine building <a href="http://marvel-grid.webflow.io/">this</a> with Flexbox? Or <a href="http://grid-masterclass.webflow.io/">this</a>?</p>
+
+<h2 id="set-up">Set Up</h2>
+
+<p>Download and open the <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a> browser. Firefox has better developer tools for Grid, so we’d recommend using this anytime you are using Grid in development.</p>
+
+<h2 id="normal-block-elements">Normal Block Elements</h2>
+
+<p>Normal block level elements, like the <code class="language-plaintext highlighter-rouge">section</code>s and <code class="language-plaintext highlighter-rouge">article</code>s we’ve all come to know and love, will take up the entire width of the page and the height they need to fit content (unless specified otherwise). They would look like this:</p>
+
+<p><strong>Note:</strong> Another stylesheet was imported into the CodePens we will be using today - that’s why you don’t see the rules for the colors and background colors!</p>
+
+<div class="cp_embed_wrapper"><iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_1" scrolling="no" src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/vYYNywM(1).html" style="width: 100%; overflow:hidden; display:block;" title="Grid Lab" loading="lazy" id="cp_embed_vYYNywM"></iframe></div>
+<script async="" src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/ei.js"></script>
+
+<h2 id="what-happens-if-we-turn-on-grid">What happens if we turn on Grid?</h2>
+
+<p>Similar to implementing Flexbox, we apply <code class="language-plaintext highlighter-rouge">display: grid;</code> to the parent element, whose direct children we want to control using Grid. Applying it alone does <strong>nothing</strong>, as you can see in the CodePen below. We need to specify our grid-template.</p>
+
+<div class="cp_embed_wrapper"><iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_2" scrolling="no" src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/MWWabMo.html" style="width: 100%; overflow:hidden; display:block;" title="Grid Lab 2" loading="lazy" id="cp_embed_MWWabMo"></iframe></div>
+<script async="" src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/ei.js"></script>
+
+<h2 id="the-grid-template-columns-property">The <code class="language-plaintext highlighter-rouge">grid-template-columns</code> Property</h2>
+
+<p>We can give each column fixed units.</p>
+
+<div class="cp_embed_wrapper"><iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_3" scrolling="no" src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/ExxVNBL.html" style="width: 100%; overflow:hidden; display:block;" title="Grid Lab 3" loading="lazy" id="cp_embed_ExxVNBL"></iframe></div>
+<script async="" src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/ei.js"></script>
+
+<h2 id="investigate-marvel">Investigate Marvel</h2>
+
+<p>This declaration is applied to the div that holds all the images.
+<code class="language-plaintext highlighter-rouge">grid-template-columns: minmax(200px, 1.167fr) 0.45fr 0.25fr 0.3fr 0.8fr;</code></p>
+
+<p>This tells us there are 5 columns, because 5 different values are making up the value for the <code class="language-plaintext highlighter-rouge">grid-template-columns</code> property. When using the inspector, we can see them:</p>
+
+<p>Two new things you probably noticed here:</p>
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/minmax"><code class="language-plaintext highlighter-rouge">minmax()</code></a></li>
+  <li><code class="language-plaintext highlighter-rouge">fr</code> (read about in the next section)</li>
+</ul>
+
+<p><img src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/marvel-grid-markedup.png" alt="Marvel Site with grid overlay"></p>
+
+<h2 id="the-fr-unit">The <code class="language-plaintext highlighter-rouge">fr</code> Unit</h2>
+
+<p>We can also use a unit that will take up a fraction of the grid - <code class="language-plaintext highlighter-rouge">fr</code>. In the example below, we have <code class="language-plaintext highlighter-rouge">grid-template-columns: 1fr 1fr 3fr;</code> - this means we will have 3 columns total. The first will be one fraction of the width of the container, the second will also be one fraction, and the third will be three fractions. Together, we have 5 fractions - so the first two columns will take up 1/5 or 20% each, and the third will take up 3/5 or 60% each.</p>
+
+<div class="cp_embed_wrapper"><iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_4" scrolling="no" src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/OJJybKV.html" style="width: 100%; overflow:hidden; display:block;" title="Grid Lab 4" loading="lazy" id="cp_embed_OJJybKV"></iframe></div>
+<script async="" src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/ei.js"></script>
+
+<section class="call-to-action">
+  <h2 id="try-it">Try It</h2>
+
+  <p>Fork the CodePen above.</p>
+  <ul>
+    <li>Change the value provided to <code class="language-plaintext highlighter-rouge">grid-template-columns</code> to <code class="language-plaintext highlighter-rouge">2fr 2fr 2fr</code>. What happens?</li>
+    <li>Change the value a few more times until you feel like you understand how the <code class="language-plaintext highlighter-rouge">fr</code> unit works.</li>
+  </ul>
+
+  <p>If you need some more time with it, <a href="https://gridbyexample.com/video/series-the-fr-unit/">here</a> is a great video and <a href="https://alligator.io/css/css-grid-layout-fr-unit/">here</a> is another written explanation.</p>
+</section>
+
+<h2 id="the-grid-template-rows-property">The <code class="language-plaintext highlighter-rouge">grid-template-rows</code> Property</h2>
+
+<p>So far, our grid rows have been implicitly set. But you can also explicitly set them using this property! In the example above, we provided the <code class="language-plaintext highlighter-rouge">grid-template-rows</code> with three units in the value: <code class="language-plaintext highlighter-rouge">100px 50px 200px</code>. The first unit defines the height of the first row, the second the second row, and the third the third row.</p>
+
+<div class="cp_embed_wrapper"><iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_5" scrolling="no" src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/MWWabNv.html" style="width: 100%; overflow:hidden; display:block;" title="grid-template-rows" loading="lazy" id="cp_embed_MWWabNv"></iframe></div>
+<script async="" src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/ei.js"></script>
+
+<h3 id="marvels-rows">Marvel’s Rows</h3>
+
+<p>Take a look at the way the Marvel site used <code class="language-plaintext highlighter-rouge">grid-template-row</code>:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.grid-2</span> <span class="p">{</span>
+  <span class="py">grid-template-columns</span><span class="p">:</span> <span class="n">minmax</span><span class="p">(</span><span class="m">200px</span><span class="p">,</span> <span class="m">1.167</span><span class="n">fr</span><span class="p">)</span> <span class="m">0.45</span><span class="n">fr</span> <span class="m">0.25</span><span class="n">fr</span> <span class="m">0.3</span><span class="n">fr</span> <span class="m">0.8</span><span class="n">fr</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><img class="medium" src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/marvel-grid-rows.png" alt="Marvel site with rows highlighted">
+<br>
+The image above leaves out the first row which is why we start with row 2 rather than 1. Notice that the image on the far left-top took up three rows, but the bottom row all had one-row-high images. This is why Grid is so powerful! It also means it’s <strong>essential to plan out</strong> how Grid will be used before writing any code.</p>
+
+<section class="call-to-action">
+  <h2 id="try-it-1">Try It</h2>
+
+  <p>Fork the CodePen above.</p>
+  <ul>
+    <li>Change the value provided to <code class="language-plaintext highlighter-rouge">grid-template-rows</code> to <code class="language-plaintext highlighter-rouge">1fr 3fr 1fr</code>. You should see that <code class="language-plaintext highlighter-rouge">fr</code> works the same way here.</li>
+    <li>Change the value to <code class="language-plaintext highlighter-rouge">100px 200px</code>. What happens to the height of the third row? Why do you think that is?</li>
+  </ul>
+</section>
+
+<h2 id="control-individual-items-with-grid-template-areas">Control individual items with <code class="language-plaintext highlighter-rouge">grid-template-areas</code></h2>
+
+<p>Now that we have explored a simple layout of columns and row, let’s get into some of the fun details that really make grid powerful.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">grid-template-areas</code> property allows you to specify areas of your page. It doesn’t automatically associate specific elements with a given area.</p>
+
+<p>First, we set up our template:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.container</span> <span class="p">{</span>
+  <span class="py">grid-template-areas</span><span class="p">:</span>
+   <span class="s1">"sidebar main main"</span>
+   <span class="s1">"sidebar footer footer"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>The code snippet above creates 6 template areas made up of 2 rows, each with three columns. Each area has a name attached to it. Notice that the same name can be used more than once.</p>
+
+<p>We will use that name to reference it from the item we want to live in that area:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box1</span> <span class="p">{</span>
+  <span class="py">grid-area</span><span class="p">:</span> <span class="n">sidebar</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.box2</span> <span class="p">{</span>
+  <span class="py">grid-area</span><span class="p">:</span> <span class="n">main</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.box3</span> <span class="p">{</span>
+  <span class="py">grid-area</span><span class="p">:</span> <span class="n">footer</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">.box1</code> will take up the entire first column since it’s <code class="language-plaintext highlighter-rouge">grid-area</code> is assigned to sidebar. <code class="language-plaintext highlighter-rouge">.box2</code> will take up the rest of the top row, and <code class="language-plaintext highlighter-rouge">.box3</code> will take up the rest of the bottom row.</p>
+
+<p><strong>Note:</strong> sidebar, main, and footer were not special or reserved keywords of any kind. The developer who creates the grid has full control over what to name these. We could use a, b, and c. We generally choose names that describe the content that will fit it, or location if dealing with dynamic content!</p>
+
+<div class="cp_embed_wrapper"><iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_6" scrolling="no" src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/RwwWoXz.html" style="width: 100%; overflow:hidden; display:block;" title="Grid Lab 13" loading="lazy" id="cp_embed_RwwWoXz"></iframe></div>
+<script async="" src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/ei.js"></script>
+
+<section class="call-to-action">
+  <h2 id="try-it-2">Try It</h2>
+
+  <p>Fork the CodePen above.</p>
+  <ul>
+    <li>Change the “sidebar” in the second row to “footer”. What happens? Is that what you expected?</li>
+    <li>In the HTML, add <code class="language-plaintext highlighter-rouge">&lt;article class="box box4"&gt;new box!&lt;/article&gt;</code> above the footer. Modify your template to have three rows, the middle row being “middle middle middle”. Then, write the code necessary to have <code class="language-plaintext highlighter-rouge">.box4</code> take up the entire middle row.</li>
+    <li>Now, add another article to your HTML, this time with the <code class="language-plaintext highlighter-rouge">.box5</code> class. <code class="language-plaintext highlighter-rouge">.box4</code> should take up the first two columns of the middle row, and <code class="language-plaintext highlighter-rouge">.box5</code> should live in the last column of the middle row.</li>
+  </ul>
+</section>
+
+<h2 id="take-a-pom">Take a Pom</h2>
+
+<p>Maybe watch a video about <a href="https://www.theatlantic.com/video/index/549953/competitive-dog-grooming/">Dog Grooming</a>? Or take a walk around the block?</p>
+
+<p>Before moving on to the next section - asses your level of comfort with the content up until now. If you are feeling foggy or nervous to go deeper, whip up your own CodePen and start from scratch. Referencing docs or this document is <strong>great</strong> but copy and pasting won’t help you much! If you do feel ready to move on - that’s cool too! The next section will provide some ways you can establish even more control over your layout.</p>
+
+<h2 id="the-grid-gap-properties">The <code class="language-plaintext highlighter-rouge">grid-gap</code> Properties</h2>
+
+<p><code class="language-plaintext highlighter-rouge">grid-gap</code> provides some breathing room around grid items. This can be handy! <code class="language-plaintext highlighter-rouge">grid-gap</code> is a little generic, as you can see in the CodePen above, this adds a gap to both columns and rows. To be more specific, we can use <code class="language-plaintext highlighter-rouge">grid-column-gap</code> and <code class="language-plaintext highlighter-rouge">grid-row-gap</code>.</p>
+
+<div class="cp_embed_wrapper"><iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_7" scrolling="no" src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/QWWjdLG.html" style="width: 100%; overflow:hidden; display:block;" title="Grid Lab 7" loading="lazy" id="cp_embed_QWWjdLG"></iframe></div>
+<script async="" src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/ei.js"></script>
+
+<section class="call-to-action">
+  <h2 id="try-it-3">Try It</h2>
+
+  <p>In the CodePen above,</p>
+  <ul>
+    <li>Change the value provided to <code class="language-plaintext highlighter-rouge">grid-gap</code> to see how that changes the appearance.</li>
+    <li>Remove the <code class="language-plaintext highlighter-rouge">grid-gap</code> declaration and add <code class="language-plaintext highlighter-rouge">grid-column-gap: 20px;</code> - what happens? Try using <code class="language-plaintext highlighter-rouge">grid-row-gap</code>, too!</li>
+  </ul>
+</section>
+
+<h2 id="changing-the-size-and-position-of-elements">Changing the size and position of elements</h2>
+
+<p>In the CodePen below, we can see that <code class="language-plaintext highlighter-rouge">.box1</code> is taking up the first two “cells” of the far-left column. Let’s look at the rule for <code class="language-plaintext highlighter-rouge">.box1</code>:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box1</span> <span class="p">{</span>
+  <span class="nl">grid-row</span><span class="p">:</span> <span class="n">span</span> <span class="m">2</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Let’s break this down:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">grid-row</code> is a property on the specific item we want to control. It allows us to define how much of the row we want this item to take up.</li>
+  <li><code class="language-plaintext highlighter-rouge">span 2</code> tells this item to take up two columns of the row it was originally in</li>
+  <li>We can see that it <code class="language-plaintext highlighter-rouge">.box1</code> is now taking up it’s original “space” as well as the space below it</li>
+</ul>
+
+<p>Similiarly, we see that <code class="language-plaintext highlighter-rouge">.box8</code> is taking up the left and middle “cells” of the bottom row.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box8</span> <span class="p">{</span>
+  <span class="nl">grid-column</span><span class="p">:</span> <span class="n">span</span> <span class="m">2</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="cp_embed_wrapper"><iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_8" scrolling="no" src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/yLLYgBX.html" style="width: 100%; overflow:hidden; display:block;" title="Grid Lab 8" loading="lazy" id="cp_embed_yLLYgBX"></iframe></div>
+<script async="" src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/ei.js"></script>
+
+<p>Next Up - we can provide <strong>two values</strong>! Here’s an example:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.box1</span> <span class="p">{</span>
+  <span class="nl">grid-row</span><span class="p">:</span> <span class="m">2</span> <span class="p">/</span> <span class="n">span</span> <span class="m">2</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Let’s break it down:</p>
+<ul>
+  <li>the <code class="language-plaintext highlighter-rouge">2</code> before the slash indicates the row that the element should <em>start</em> on</li>
+  <li>the <code class="language-plaintext highlighter-rouge">span 2</code> after the slash indicates the row should end on, or how long it should span</li>
+</ul>
+
+<p><strong>Note:</strong> <code class="language-plaintext highlighter-rouge">-1</code> will refer to the end of the column or row, no matter the number of columns or rows.</p>
+
+<div class="cp_embed_wrapper"><iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_9" scrolling="no" src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/ExxVZYL.html" style="width: 100%; overflow:hidden; display:block;" title="Grid Lab 9" loading="lazy" id="cp_embed_ExxVZYL"></iframe></div>
+<script async="" src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/ei.js"></script>
+
+<section class="call-to-action">
+  <h2 id="try-it-4">Try It</h2>
+
+  <p>In the CodePen above,</p>
+  <ul>
+    <li>Change the value provided to <code class="language-plaintext highlighter-rouge">grid-row</code> for <code class="language-plaintext highlighter-rouge">.box1</code> to <code class="language-plaintext highlighter-rouge">1 / span 2</code>.</li>
+    <li>Now try <code class="language-plaintext highlighter-rouge">1 / span 3</code></li>
+    <li>Now try <code class="language-plaintext highlighter-rouge">2 / span 1</code></li>
+    <li>What happens when you try <code class="language-plaintext highlighter-rouge">2 / span 3</code>? Not what you expected maybe? Why did that happen?</li>
+  </ul>
+</section>
+
+<h2 id="dry-it-up-using-repeat">Dry it up using <code class="language-plaintext highlighter-rouge">repeat()</code></h2>
+
+<p>If you are going to sett all columns or all rows to the same height/width, <code class="language-plaintext highlighter-rouge">repeat</code> can be a clean way to communicate that (especially if you have a big grid)!</p>
+
+<div class="cp_embed_wrapper"><iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_10" scrolling="no" src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/YzzyNKM.html" style="width: 100%; overflow:hidden; display:block;" title="Grid Lab 5" loading="lazy" id="cp_embed_YzzyNKM"></iframe></div>
+<script async="" src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/ei.js"></script>
+
+<h2 id="fill-in-the-gaps-using-grid-auto-flow-dense">Fill in the gaps using <code class="language-plaintext highlighter-rouge">grid-auto-flow: dense</code></h2>
+
+<p>Note that this will change the position of elements and therefore may not be great for accessibility.</p>
+
+<div class="cp_embed_wrapper"><iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_11" scrolling="no" src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/Baaopao.html" style="width: 100%; overflow:hidden; display:block;" title="Grid Lab 10" loading="lazy" id="cp_embed_Baaopao"></iframe></div>
+<script async="" src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/ei.js"></script>
+
+<h2 id="utilizing-auto-fit">Utilizing <code class="language-plaintext highlighter-rouge">auto-fit</code></h2>
+
+<p><code class="language-plaintext highlighter-rouge">auto-fit</code> allows us to make our grid adaptive!</p>
+
+<div class="cp_embed_wrapper"><iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_12" scrolling="no" src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/MWWaJWE.html" style="width: 100%; overflow:hidden; display:block;" title="Grid Lab 11" loading="lazy" id="cp_embed_MWWaJWE"></iframe></div>
+<script async="" src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/ei.js"></script>
+
+<h2 id="adding-minmax">Adding <code class="language-plaintext highlighter-rouge">minmax</code></h2>
+
+<p>The addition of <code class="language-plaintext highlighter-rouge">minmax</code> makes things responsive!</p>
+
+<div class="cp_embed_wrapper"><iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="300" width="100%" name="cp_embed_13" scrolling="no" src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/zYYvNYj.html" style="width: 100%; overflow:hidden; display:block;" title="Grid Lab 12" loading="lazy" id="cp_embed_zYYvNYj"></iframe></div>
+<script async="" src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/ei.js"></script>
+
+<h2 id="additional-resources">Additional Resources</h2>
+<ul>
+  <li><a href="https://cssgridgarden.com/">Grid Garden</a></li>
+  <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">CSS Tricks - Complete Guide To Grid</a></li>
+  <li><a href="https://cssgrid.io/">Wes Bos video tutorial series on Grid</a></li>
+</ul>
+
+        </article>
+      </section>
+    </div>
+    <section class="search-results-container hide">
+  <h2>Lesson Search Results</h2>
+  <h3>Showing top 10 results</h3>
+  <ul class="search-results"></ul>
+  <img class="clear-search" src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/x-icon.svg">
+</section>
+
+<script src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/algoliasearch.min.js"></script>
+<script>
+  window.ALGOLIA_CONFIG = {
+    'applicationId': 'OOLQ64CUYT',
+    'indexName': 'front-end-curriculum',
+    'apiKey': '5b955c38c514d8e5cb906c983c8c24db'
+  }
+</script>
+<script src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/search.js"></script>
+    <script async="" src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/ei(1).js"></script>
+    <script src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/active-links.js"></script>
+    <script src="./CSS_ Grid Tutorial - Front-End Engineering Curriculum - Turing School of Software and Design_files/expander.js"></script>
+  
+
+</body></html>
