@@ -33,6 +33,12 @@ main {
     display: inline-block;
 
   }
+.imag-grid{
+    display: grid;
+    gap: 10px;
+    margin: 20px 0;
+    grid-template-columns: auto;
+}
   section{
     width: 70%;
     margin: 20px auto;
