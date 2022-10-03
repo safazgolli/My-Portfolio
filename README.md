@@ -15,4 +15,4 @@ If I click on the images of the applications, I am taken to that deployed applic
 If resize the page or view the site on various screens and devices, I am presented with a responsive layout that adapts to my viewport
 
 ## link:
-
+https://safazgolli.github.io/My-Portfolio/
