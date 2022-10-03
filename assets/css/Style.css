@@ -46,6 +46,7 @@ main {
     /* Sets top and bottom margin to 20px. Auto will center element */
     border: 5px solid darkblue;
     background-color: #66aede;
+     align-items: center;
     
   }
   
