@@ -33,6 +33,12 @@ main {
     display: inline-block;
 
   }
+.imag-grid{
+    display: grid;
+    gap: 10px;
+    margin: 20px 0;
+    grid-template-columns: auto;
+}
   section{
     width: 70%;
     margin: 20px auto;
@@ -40,6 +46,7 @@ main {
     /* Sets top and bottom margin to 20px. Auto will center element */
     border: 5px solid darkblue;
     background-color: #66aede;
+     align-items: center;
     
   }
   
